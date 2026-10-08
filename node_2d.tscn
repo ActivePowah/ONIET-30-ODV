@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bm3yvj77u550m"]
+
+[ext_resource type="PackedScene" uid="uid://b6h7ca5jlb13l" path="res://obstaculo_base.tscn" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://msqg6jg0oyxt" path="res://interfaz/efectos_agarrando.tscn" id="2_epypp"]
+
+[node name="Node2D" type="Node2D" unique_id=318445325]
+
+[node name="ObstaculoBase2" parent="." unique_id=778697240 instance=ExtResource("2_0e48y")]
+position = Vector2(710, 393)
+
+[node name="EffectosAgarrando" parent="." unique_id=756627589 instance=ExtResource("2_epypp")]
