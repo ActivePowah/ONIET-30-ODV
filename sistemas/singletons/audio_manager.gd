@@ -3,18 +3,20 @@ extends Node
 enum Canciones{
 	NORMAL,
 	ANSIOSO,
-	PAUSA,
+	DERROTA,
+	VICTORIA,
+	MENU
 }
 
 enum Sonidos{
-	ATERRIZAR,
-	ACEPTAR,
-	DENEGAR
+	PAUSA,
+	DESPAUSA,
 }
 
 @onready var music_player: AudioStreamPlayer = %MusicPlayer
 
 @export var canciones : Dictionary[Canciones, AudioStream]
+@export var sonidos : Dictionary[Sonidos, AudioStream]
 
 var snd_player_array : Array[AudioStreamPlayer]
 

@@ -219,6 +219,7 @@ texture = ExtResource("9_l2umo")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=1172115250]
 script = ExtResource("9_xdj4n")
+final_victory = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1308797230]
 position = Vector2(6543.8, -1269)

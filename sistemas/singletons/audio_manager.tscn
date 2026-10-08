@@ -3,12 +3,22 @@
 [ext_resource type="Script" uid="uid://db00e65bo4fyv" path="res://sistemas/singletons/audio_manager.gd" id="1_goeia"]
 [ext_resource type="AudioStream" uid="uid://buqtpft0y222n" path="res://assets/musica/Cancion1.ogg" id="2_ytl3b"]
 [ext_resource type="AudioStream" uid="uid://b6fjkpqqhg2rq" path="res://assets/musica/Cancion1B.ogg" id="3_v1yx6"]
+[ext_resource type="AudioStream" uid="uid://cembpcah1rcpw" path="res://assets/musica/derrota.wav" id="4_8wu04"]
+[ext_resource type="AudioStream" uid="uid://dm0n4b5uuk2w1" path="res://assets/musica/victoria.wav" id="5_folk4"]
+[ext_resource type="AudioStream" uid="uid://b7rkghgt07a8k" path="res://assets/musica/pausa.wav" id="6_jh5mf"]
+[ext_resource type="AudioStream" uid="uid://bcfc863er1jo7" path="res://assets/musica/despausa.wav" id="7_bhwu8"]
 
 [node name="AudioManager" type="Node" unique_id=915187914]
 script = ExtResource("1_goeia")
 canciones = Dictionary[int, AudioStream]({
 0: ExtResource("2_ytl3b"),
-1: ExtResource("3_v1yx6")
+1: ExtResource("3_v1yx6"),
+2: ExtResource("4_8wu04"),
+3: ExtResource("5_folk4")
+})
+sonidos = Dictionary[int, AudioStream]({
+0: ExtResource("6_jh5mf"),
+1: ExtResource("7_bhwu8")
 })
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=620948440]
