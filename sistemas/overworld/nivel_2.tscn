@@ -1,26 +1,229 @@
 [gd_scene format=3 uid="uid://cm8fa48k0t7ck"]
 
 [ext_resource type="Script" uid="uid://48stx56iqlx7" path="res://sistemas/overworld/nivel.gd" id="1_6vpx4"]
-[ext_resource type="Texture2D" uid="uid://u5xiuekvy5lp" path="res://assets/musica/icon.svg" id="2_2mna2"]
+[ext_resource type="Script" uid="uid://lq7q7ilbl58t" path="res://sistemas/overworld/collthing.gd" id="2_fgpmv"]
 [ext_resource type="PackedScene" uid="uid://bhb2vks51b4tk" path="res://sistemas/overworld/cara_canvas.tscn" id="3_4r6xa"]
+[ext_resource type="Script" uid="uid://bcld1bfgimyjk" path="res://sistemas/componentes/componente_nivelador.gd" id="3_gue1v"]
 [ext_resource type="PackedScene" uid="uid://msqg6jg0oyxt" path="res://interfaz/efectos_agarrando.tscn" id="4_7egvg"]
+[ext_resource type="Texture2D" uid="uid://dgnw30f7ktenk" path="res://assets/sprites/nivelador.png" id="4_agsdk"]
 [ext_resource type="PackedScene" uid="uid://bqntfgk0smxuh" path="res://entidades/jugador/jugador.tscn" id="5_uejlf"]
-[ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="6_7egvg"]
+[ext_resource type="Script" uid="uid://b4e7ewat2auy6" path="res://sistemas/overworld/area_2d.gd" id="6_7egvg"]
+[ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="8_agsdk"]
+[ext_resource type="Script" uid="uid://cuqh1nid3joj2" path="res://sistemas/overworld/win.gd" id="9_gue1v"]
 
-[node name="Nivel2" type="Node2D" unique_id=1886793892]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3k05"]
+size = Vector2(724, 291.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gue1v"]
+size = Vector2(527, 378)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_54idv"]
+distance = -546.0
+
+[node name="Nivel1" type="Node2D" unique_id=1886793892]
 script = ExtResource("1_6vpx4")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=82479227]
+[node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=119222286]
+position = Vector2(-1323, 137)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1736141151]
+[node name="CollThing" type="CollisionPolygon2D" parent="StaticBody2D9" unique_id=493360031]
 position = Vector2(6, 52)
-polygon = PackedVector2Array(-47, -33, 64, -48, 102, 144, -69, 149)
+polygon = PackedVector2Array(2271, -205, 1731, -188, 1439, -245, 1049, -46)
+script = ExtResource("2_fgpmv")
+metadata/_custom_type_script = "uid://lq7q7ilbl58t"
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=181746568]
-position = Vector2(91, 88)
-texture = ExtResource("2_2mna2")
+[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D9" unique_id=1829170057 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre")]
+script = ExtResource("3_gue1v")
+nodo_a_nivelar = NodePath("..")
+area_de_agarre = NodePath("../Area2D")
+metadata/_custom_type_script = "uid://bcld1bfgimyjk"
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D9" unique_id=1276400222]
+position = Vector2(1714, -95)
+scale = Vector2(0.5, 0.5)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D9/Area2D" unique_id=590193517]
+position = Vector2(892.00006, -40.000004)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_agsdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9/Area2D" unique_id=1529796296]
+position = Vector2(894, -28.25)
+shape = SubResource("RectangleShape2D_r3k05")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=197783477]
+
+[node name="CollThing" type="CollisionPolygon2D" parent="StaticBody2D2" unique_id=961696770]
+position = Vector2(6, 52)
+polygon = PackedVector2Array(1892, 6, 1564, -97, 1439, -245, 1049, -46)
+script = ExtResource("2_fgpmv")
+metadata/_custom_type_script = "uid://lq7q7ilbl58t"
+
+[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D2" unique_id=1983478718 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre")]
+script = ExtResource("3_gue1v")
+nodo_a_nivelar = NodePath("..")
+area_de_agarre = NodePath("../Area2D")
+metadata/_custom_type_script = "uid://bcld1bfgimyjk"
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D2" unique_id=880782211]
+position = Vector2(1348, 23)
+scale = Vector2(0.5, 0.5)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D2/Area2D" unique_id=997269646]
+position = Vector2(887.5, 15.499998)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_agsdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/Area2D" unique_id=33689404]
+position = Vector2(885.5, 11.75)
+shape = SubResource("RectangleShape2D_r3k05")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=550569407]
+position = Vector2(1868, -23)
+
+[node name="CollThing" type="CollisionPolygon2D" parent="StaticBody2D4" unique_id=1129479109]
+position = Vector2(6, 52)
+polygon = PackedVector2Array(1881, -64, 2043, -248, 1364, -36, 1402, -215, 987, -268, 1049, -46, 1241, 74)
+script = ExtResource("2_fgpmv")
+metadata/_custom_type_script = "uid://lq7q7ilbl58t"
+
+[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D4" unique_id=514902483 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre")]
+script = ExtResource("3_gue1v")
+nodo_a_nivelar = NodePath("..")
+area_de_agarre = NodePath("../Area2D")
+metadata/_custom_type_script = "uid://bcld1bfgimyjk"
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D4" unique_id=42188051]
+position = Vector2(1231, -62)
+scale = Vector2(0.5, 0.5)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D4/Area2D" unique_id=1962648096]
+position = Vector2(1411.5, -129.50002)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_agsdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4/Area2D" unique_id=762325137]
+position = Vector2(1409.5, -133.25)
+shape = SubResource("RectangleShape2D_r3k05")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1438034036]
+position = Vector2(3243, -335)
+
+[node name="CollThing" type="CollisionPolygon2D" parent="StaticBody2D5" unique_id=438391521]
+position = Vector2(6, 52)
+polygon = PackedVector2Array(2110, -203, 1955, -348, 1585, -197, 1189, -40, 811, 228, 1146, 329, 1241, 74, 1620, 228, 1930.3772, -152.1726)
+script = ExtResource("2_fgpmv")
+metadata/_custom_type_script = "uid://lq7q7ilbl58t"
+
+[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D5" unique_id=1854255360 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre")]
+script = ExtResource("3_gue1v")
+nodo_a_nivelar = NodePath("..")
+area_de_agarre = NodePath("../Area2D")
+metadata/_custom_type_script = "uid://bcld1bfgimyjk"
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D5" unique_id=58405713]
+position = Vector2(1218, 47)
+scale = Vector2(0.5, 0.5)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D5/Area2D" unique_id=450618345]
+position = Vector2(1267.5, -471.50006)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_agsdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5/Area2D" unique_id=1429897631]
+position = Vector2(1265.5, -475.25)
+shape = SubResource("RectangleShape2D_r3k05")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=1189915053]
+position = Vector2(5913, 142)
+
+[node name="CollThing" type="CollisionPolygon2D" parent="StaticBody2D7" unique_id=935520410]
+position = Vector2(6, 52)
+polygon = PackedVector2Array(2186, -135, 2035, -281, 1505, 32, 1189, -40, 1019, 185, 1146, 329, 1241, 74, 1620, 228, 1930.3772, -152.1726)
+script = ExtResource("2_fgpmv")
+metadata/_custom_type_script = "uid://lq7q7ilbl58t"
+
+[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D7" unique_id=705903395 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre")]
+script = ExtResource("3_gue1v")
+nodo_a_nivelar = NodePath("..")
+area_de_agarre = NodePath("../Area2D")
+metadata/_custom_type_script = "uid://bcld1bfgimyjk"
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D7" unique_id=751570272]
+position = Vector2(1366, 189)
+scale = Vector2(0.5, 0.5)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D7/Area2D" unique_id=1099296622]
+position = Vector2(1267.5, -471.50006)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_agsdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7/Area2D" unique_id=669857552]
+position = Vector2(1265.5, -475.25)
+shape = SubResource("RectangleShape2D_r3k05")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=1669854546]
+position = Vector2(4589, -347)
+
+[node name="CollThing" type="CollisionPolygon2D" parent="StaticBody2D6" unique_id=1825055852]
+position = Vector2(6, 52)
+polygon = PackedVector2Array(2547, 433, 2142, 79, 1656, -170, 1323, -223, 900, -336, 1345, -66, 1678, 60, 1869, 148)
+script = ExtResource("2_fgpmv")
+metadata/_custom_type_script = "uid://lq7q7ilbl58t"
+
+[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D6" unique_id=1435076382 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre")]
+script = ExtResource("3_gue1v")
+nodo_a_nivelar = NodePath("..")
+area_de_agarre = NodePath("../Area2D")
+metadata/_custom_type_script = "uid://bcld1bfgimyjk"
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D6" unique_id=1894766223]
+position = Vector2(1218, 47)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=2103564116]
+position = Vector2(6907, -278)
+
+[node name="CollThing" type="CollisionPolygon2D" parent="StaticBody2D8" unique_id=1617135423]
+position = Vector2(6, 52)
+polygon = PackedVector2Array(2706, -267, 1805, -392, 1585, -282, 1324, -210, 1049, -46, 1241, 74, 1753, -234, 1930.3772, -152.1726)
+script = ExtResource("2_fgpmv")
+metadata/_custom_type_script = "uid://lq7q7ilbl58t"
+
+[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D8" unique_id=143254779 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre")]
+script = ExtResource("3_gue1v")
+nodo_a_nivelar = NodePath("..")
+area_de_agarre = NodePath("../Area2D")
+metadata/_custom_type_script = "uid://bcld1bfgimyjk"
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D8" unique_id=299078507]
+position = Vector2(1218, 47)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=154539508]
+position = Vector2(1087, -20.99997)
+rotation = -0.12391838
+
+[node name="CollThing" type="CollisionPolygon2D" parent="StaticBody2D3" unique_id=1118933182]
+position = Vector2(-241.61345, 14.245422)
+polygon = PackedVector2Array(1409.5707, 90.92221, 2043, -248, 1600.9991, -94.8414, 1049, -46)
+script = ExtResource("2_fgpmv")
+metadata/_custom_type_script = "uid://lq7q7ilbl58t"
+
+[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D3" unique_id=206082405 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre")]
+script = ExtResource("3_gue1v")
+nodo_a_nivelar = NodePath("..")
+area_de_agarre = NodePath("../Area2D")
+metadata/_custom_type_script = "uid://bcld1bfgimyjk"
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D3" unique_id=1922479225]
+position = Vector2(1493, -153)
+scale = Vector2(0.5, 0.5)
 
 [node name="CaraCanvas" parent="." unique_id=415942711 instance=ExtResource("3_4r6xa")]
+tiempo_maximo = 10.0
+tiempo_ans = 8.0
+tiempo_apurado = 5.0
 
 [node name="EffectosAgarrando" parent="." unique_id=756627589 instance=ExtResource("4_7egvg")]
 
@@ -28,14 +231,13 @@ texture = ExtResource("2_2mna2")
 position = Vector2(16, -96)
 camara = NodePath("Camera2D")
 
-[node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=1842132714]
-zoom = Vector2(2, 2)
+[node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=2044790140]
 position_smoothing_enabled = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=106769895]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1282263022]
 layer = -13
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1132133058]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1495452123]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -49,5 +251,21 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Fondo" type="Sprite2D" parent="CanvasLayer/Control" unique_id=1741786063]
-texture = ExtResource("6_7egvg")
+[node name="Fondo" type="Sprite2D" parent="CanvasLayer/Control" unique_id=2055169127]
+texture = ExtResource("8_agsdk")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=278318701]
+position = Vector2(2508, 9)
+script = ExtResource("9_gue1v")
+final_victory = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=812152194]
+position = Vector2(6919, -859)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_gue1v")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=114922468]
+script = ExtResource("6_7egvg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1062800087]
+shape = SubResource("WorldBoundaryShape2D_54idv")

@@ -6,7 +6,17 @@
 [ext_resource type="Texture2D" uid="uid://duwsaeo34wo0b" path="res://assets/sprites/portrait 2c.png" id="3_np8p3"]
 [ext_resource type="Texture2D" uid="uid://cv74n21c8bqox" path="res://assets/sprites/portrait 1a.png" id="4_yc281"]
 [ext_resource type="Texture2D" uid="uid://6r03icbijaea" path="res://assets/sprites/portrait 1b.png" id="5_0h2xp"]
+[ext_resource type="Texture2D" uid="uid://xrnu3fqav1f2" path="res://assets/sprites/portrait 3a.png" id="5_yc281"]
+[ext_resource type="Texture2D" uid="uid://27p8fd23d5bi" path="res://assets/sprites/portrait 3b.png" id="6_0h2xp"]
 [ext_resource type="Texture2D" uid="uid://dofnfrci42xof" path="res://assets/sprites/portrait 1c.png" id="6_85d70"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85d70"]
+atlas = ExtResource("5_yc281")
+region = Rect2(0, 0, 508, 506)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir0vu"]
+atlas = ExtResource("6_0h2xp")
+region = Rect2(0, 0, 508, 506)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_aef47"]
 animations = [{
@@ -26,6 +36,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_85d70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir0vu")
+}],
+"loop": 1,
+"name": &"apurado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("4_yc281")
 }, {
 "duration": 1.0,
@@ -41,6 +62,9 @@ animations = [{
 
 [node name="CaraCanvas" type="CanvasLayer" unique_id=415942711 node_paths=PackedStringArray("cara_sprite")]
 script = ExtResource("1_0bh3s")
+tiempo_maximo = 8.0
+tiempo_ans = 6.0
+tiempo_apurado = 4.0
 cara_sprite = NodePath("Control/Cara")
 
 [node name="Control" type="Control" parent="." unique_id=590265693]
@@ -56,5 +80,5 @@ grow_vertical = 0
 position = Vector2(124.17787, -114.5)
 scale = Vector2(0.6778656, 0.6778656)
 sprite_frames = SubResource("SpriteFrames_aef47")
-animation = &"normal"
+animation = &"apurado"
 autoplay = "normal"

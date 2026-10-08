@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://b2gqiji0h0t74"]
 
+[ext_resource type="Script" uid="uid://c3bawuudyx7tf" path="res://defeatscene.gd" id="1_4gqt3"]
 [ext_resource type="Texture2D" uid="uid://bfbuwl1hw82bm" path="res://assets/sprites/menu.png" id="1_4gqt3"]
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="1_06jp2"]
 [ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="2_06jp2"]
 [ext_resource type="Texture2D" uid="uid://cwlpfqmik224u" path="res://assets/sprites/derorta.png" id="4_rso2m"]
 
 [node name="defeatscene" type="CanvasLayer" unique_id=2145725605]
+script = ExtResource("1_4gqt3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1314068464]
 anchors_preset = 8

@@ -15,8 +15,6 @@ func _physics_process(delta: float) -> void:
 	if !nodo_agarrado:
 		return
 	if Input.is_action_just_pressed("Left Click") and nodo_agarrado:
-		if nodo_agarrado.jugador_encima:
-			return
 		nodo_en_mano = true
 		agarrar.emit(true)
 	if Input.is_action_pressed("Left Click"):
