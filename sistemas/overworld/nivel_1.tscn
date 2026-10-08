@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://8s3jkcccq1g8"]
+
+[ext_resource type="Script" uid="uid://48stx56iqlx7" path="res://sistemas/overworld/nivel.gd" id="1_xfh1s"]
+[ext_resource type="Script" uid="uid://bcld1bfgimyjk" path="res://sistemas/componentes/componente_nivelador.gd" id="2_hgbn4"]
+[ext_resource type="PackedScene" uid="uid://bhb2vks51b4tk" path="res://sistemas/overworld/cara_canvas.tscn" id="3_hgbn4"]
+[ext_resource type="Texture2D" uid="uid://dd5370p8fe42i" path="res://icon.svg" id="3_n0lwm"]
+[ext_resource type="PackedScene" uid="uid://msqg6jg0oyxt" path="res://interfaz/efectos_agarrando.tscn" id="4_n0lwm"]
+[ext_resource type="PackedScene" uid="uid://bqntfgk0smxuh" path="res://entidades/jugador/jugador.tscn" id="5_8dk67"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3k05"]
+size = Vector2(289, 211.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgbn4"]
+size = Vector2(1307, 275)
+
+[node name="Nivel1" type="Node2D" unique_id=1886793892 node_paths=PackedStringArray("spawn")]
+script = ExtResource("1_xfh1s")
+spawn = NodePath("Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1207990717]
+position = Vector2(-10, -182)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=82479227]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1736141151]
+position = Vector2(6, 52)
+polygon = PackedVector2Array(-284, -72, 170, -60, 291, -103, 763, -107, 967.2954, 6.0488586, 1016, 33, 360, 141, -69, 149)
+
+[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D" unique_id=1972579857 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre", "area_de_deteccion")]
+script = ExtResource("2_hgbn4")
+nodo_a_nivelar = NodePath("..")
+area_de_agarre = NodePath("../Area2D")
+area_de_deteccion = NodePath("../Area2D2")
+metadata/_custom_type_script = "uid://bcld1bfgimyjk"
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=440687199]
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D/Area2D" unique_id=1447117537]
+position = Vector2(887.5, 15.499998)
+scale = Vector2(2.2421875, 1.6328125)
+texture = ExtResource("3_n0lwm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D" unique_id=1524061473]
+position = Vector2(885.5, 11.75)
+shape = SubResource("RectangleShape2D_r3k05")
+
+[node name="Area2D2" type="Area2D" parent="StaticBody2D" unique_id=816511438]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D2" unique_id=157560937]
+position = Vector2(356.5, 82.5)
+shape = SubResource("RectangleShape2D_hgbn4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=546940838]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" unique_id=820356451]
+position = Vector2(442, 157)
+polygon = PackedVector2Array(937, -235, 971, -397, 737, -267, 528, -241, 707, -184)
+
+[node name="Label" type="Label" parent="." unique_id=385155061]
+offset_left = 274.0
+offset_top = -173.0
+offset_right = 663.0
+offset_bottom = -49.0
+text = "Presiona los cuadrados amarillos para rotar"
+
+[node name="CaraCanvas" parent="." unique_id=415942711 instance=ExtResource("3_hgbn4")]
+
+[node name="EffectosAgarrando" parent="." unique_id=756627589 instance=ExtResource("4_n0lwm")]
+
+[node name="Jugador" parent="." unique_id=870915588 node_paths=PackedStringArray("camara") instance=ExtResource("5_8dk67")]
+position = Vector2(16, -96)
+camara = NodePath("Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=2044790140]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
