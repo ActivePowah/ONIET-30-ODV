@@ -93,7 +93,7 @@ area_de_agarre = NodePath("../Area2D")
 metadata/_custom_type_script = "uid://bcld1bfgimyjk"
 
 [node name="Area2D" type="Area2D" parent="StaticBody2D4" unique_id=42188051]
-position = Vector2(1231, -62)
+position = Vector2(1201, 29)
 scale = Vector2(0.5, 0.5)
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D4/Area2D" unique_id=1962648096]
@@ -121,7 +121,7 @@ area_de_agarre = NodePath("../Area2D")
 metadata/_custom_type_script = "uid://bcld1bfgimyjk"
 
 [node name="Area2D" type="Area2D" parent="StaticBody2D5" unique_id=58405713]
-position = Vector2(1218, 47)
+position = Vector2(1319, 108)
 scale = Vector2(0.5, 0.5)
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D5/Area2D" unique_id=450618345]
