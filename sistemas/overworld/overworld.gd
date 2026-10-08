@@ -7,8 +7,7 @@ var nivel_ahora : Nivel
 
 func _ready() -> void:
 	cambiar_nivel(0)
-	await get_tree().create_timer(1).timeout
-	cambiar_nivel(1)
+	
 func cambiar_nivel(numero : int):
 	if nivel_ahora:
 		nivel_ahora.queue_free()

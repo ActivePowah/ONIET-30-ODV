@@ -8,13 +8,27 @@ script = ExtResource("1_xfh1s")
 spawn = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1207990717]
+position = Vector2(-10, -182)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=82479227]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1736141151]
 position = Vector2(6, 52)
-polygon = PackedVector2Array(-47, -33, 64, -48, 102, 144, -69, 149)
+polygon = PackedVector2Array(-284, -72, 170, -60, 291, -103, 763, -107, 967.2954, 6.0488586, 1016, 33, 360, 141, -69, 149)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=546940838]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" unique_id=820356451]
+position = Vector2(442, 157)
+polygon = PackedVector2Array(937, -235, 971, -397, 737, -267, 528, -241, 707, -184)
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=181746568]
 position = Vector2(91, 88)
 texture = ExtResource("2_j7yn2")
+
+[node name="Label" type="Label" parent="." unique_id=385155061]
+offset_left = 274.0
+offset_top = -173.0
+offset_right = 663.0
+offset_bottom = -49.0
+text = "Presiona los cuadrados amarillos para rotar"
