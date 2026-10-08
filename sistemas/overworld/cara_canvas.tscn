@@ -62,6 +62,9 @@ animations = [{
 
 [node name="CaraCanvas" type="CanvasLayer" unique_id=415942711 node_paths=PackedStringArray("cara_sprite")]
 script = ExtResource("1_0bh3s")
+tiempo_maximo = 8.0
+tiempo_ans = 6.0
+tiempo_apurado = 4.0
 cara_sprite = NodePath("Control/Cara")
 
 [node name="Control" type="Control" parent="." unique_id=590265693]

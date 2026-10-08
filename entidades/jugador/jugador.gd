@@ -26,4 +26,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func morir():
-	get_tree().change_scene_to_file("res://defeatscene.tscn")
+	if is_on_wall():
+		get_tree().change_scene_to_file("res://defeatscene.tscn")
