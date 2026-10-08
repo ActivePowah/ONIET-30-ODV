@@ -3,6 +3,8 @@
 [ext_resource type="Theme" uid="uid://bao64fw2qf7ui" path="res://tema_principal.tres" id="1_moa8w"]
 [ext_resource type="Script" uid="uid://bgdeikxgxhh1g" path="res://interfaz/nivel_1.gd" id="2_bw4h4"]
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="2_f02h5"]
+[ext_resource type="Script" uid="uid://d2tpaejbojok2" path="res://interfaz/Nivel2.gd" id="3_apsk4"]
+[ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="5_2mc3s"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1076210625]
 
@@ -41,11 +43,7 @@ script = ExtResource("2_bw4h4")
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "2"
-
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1512107191]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-text = "3"
+script = ExtResource("3_apsk4")
 
 [node name="Button" type="Button" parent="." unique_id=171678629]
 anchors_preset = 2
@@ -56,3 +54,26 @@ offset_right = 8.0
 grow_vertical = 0
 text = "Volver"
 script = ExtResource("2_f02h5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=734682711]
+layer = -13
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1946767607]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="Sprite2D" parent="CanvasLayer/Control" unique_id=1309474159]
+modulate = Color(0.45748308, 0.45748308, 0.45748308, 1)
+position = Vector2(19.999985, 28)
+scale = Vector2(0.61375433, 0.6137544)
+texture = ExtResource("5_2mc3s")
