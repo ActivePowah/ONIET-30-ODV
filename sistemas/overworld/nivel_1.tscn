@@ -13,12 +13,8 @@ size = Vector2(289, 211.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgbn4"]
 size = Vector2(1307, 275)
 
-[node name="Nivel1" type="Node2D" unique_id=1886793892 node_paths=PackedStringArray("spawn")]
+[node name="Nivel1" type="Node2D" unique_id=1886793892]
 script = ExtResource("1_xfh1s")
-spawn = NodePath("Marker2D")
-
-[node name="Marker2D" type="Marker2D" parent="." unique_id=1207990717]
-position = Vector2(-10, -182)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=82479227]
 
@@ -57,10 +53,11 @@ position = Vector2(442, 157)
 polygon = PackedVector2Array(937, -235, 971, -397, 737, -267, 528, -241, 707, -184)
 
 [node name="Label" type="Label" parent="." unique_id=385155061]
-offset_left = 274.0
-offset_top = -173.0
-offset_right = 663.0
-offset_bottom = -49.0
+offset_left = 338.0
+offset_top = -192.0
+offset_right = 2666.0
+offset_bottom = -68.0
+theme_override_font_sizes/font_size = 20
 text = "Presiona los cuadrados amarillos para rotar"
 
 [node name="CaraCanvas" parent="." unique_id=415942711 instance=ExtResource("3_hgbn4")]
