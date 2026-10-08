@@ -5,10 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://bhb2vks51b4tk" path="res://sistemas/overworld/cara_canvas.tscn" id="3_4r6xa"]
 [ext_resource type="PackedScene" uid="uid://msqg6jg0oyxt" path="res://interfaz/efectos_agarrando.tscn" id="4_7egvg"]
 [ext_resource type="PackedScene" uid="uid://bqntfgk0smxuh" path="res://entidades/jugador/jugador.tscn" id="5_uejlf"]
+[ext_resource type="Script" uid="uid://b4e7ewat2auy6" path="res://sistemas/overworld/area_2d.gd" id="6_7egvg"]
 
-[node name="Nivel2" type="Node2D" unique_id=1886793892 node_paths=PackedStringArray("spawn")]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uejlf"]
+distance = -800.0
+
+[node name="Nivel2" type="Node2D" unique_id=1886793892]
 script = ExtResource("1_6vpx4")
-spawn = NodePath("")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=82479227]
 
@@ -31,3 +34,9 @@ camara = NodePath("Camera2D")
 [node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=1842132714]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1856210463]
+script = ExtResource("6_7egvg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1731123903]
+shape = SubResource("WorldBoundaryShape2D_uejlf")

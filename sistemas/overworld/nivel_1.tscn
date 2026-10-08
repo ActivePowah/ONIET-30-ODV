@@ -6,12 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://dd5370p8fe42i" path="res://icon.svg" id="3_n0lwm"]
 [ext_resource type="PackedScene" uid="uid://msqg6jg0oyxt" path="res://interfaz/efectos_agarrando.tscn" id="4_n0lwm"]
 [ext_resource type="PackedScene" uid="uid://bqntfgk0smxuh" path="res://entidades/jugador/jugador.tscn" id="5_8dk67"]
+[ext_resource type="Script" uid="uid://b4e7ewat2auy6" path="res://sistemas/overworld/area_2d.gd" id="7_8dk67"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3k05"]
 size = Vector2(289, 211.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgbn4"]
-size = Vector2(1307, 275)
+size = Vector2(1307, 174)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dk67"]
+size = Vector2(1509.5, 349)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r3k05"]
+distance = -546.0
 
 [node name="Nivel1" type="Node2D" unique_id=1886793892]
 script = ExtResource("1_xfh1s")
@@ -22,14 +29,19 @@ script = ExtResource("1_xfh1s")
 position = Vector2(6, 52)
 polygon = PackedVector2Array(-284, -72, 170, -60, 291, -103, 763, -107, 967.2954, 6.0488586, 1016, 33, 360, 141, -69, 149)
 
-[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D" unique_id=1972579857 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre", "area_de_deteccion")]
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D" unique_id=2037499903]
+position = Vector2(3, 51)
+polygon = PackedVector2Array(-284, -72, 170, -60, 291, -103, 763, -107, 967.2954, 6.0488586, 1016, 33, 360, 141, -69, 149)
+
+[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D" unique_id=1972579857 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre")]
 script = ExtResource("2_hgbn4")
 nodo_a_nivelar = NodePath("..")
 area_de_agarre = NodePath("../Area2D")
-area_de_deteccion = NodePath("../Area2D2")
 metadata/_custom_type_script = "uid://bcld1bfgimyjk"
 
 [node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=440687199]
+position = Vector2(385, -7)
+scale = Vector2(0.5, 0.5)
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/Area2D" unique_id=1447117537]
 position = Vector2(887.5, 15.499998)
@@ -43,14 +55,44 @@ shape = SubResource("RectangleShape2D_r3k05")
 [node name="Area2D2" type="Area2D" parent="StaticBody2D" unique_id=816511438]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D2" unique_id=157560937]
-position = Vector2(356.5, 82.5)
+position = Vector2(356.5, 133)
 shape = SubResource("RectangleShape2D_hgbn4")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=546940838]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1467526588]
+position = Vector2(1344, -36)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" unique_id=820356451]
-position = Vector2(442, 157)
-polygon = PackedVector2Array(937, -235, 971, -397, 737, -267, 528, -241, 707, -184)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" unique_id=1429344610]
+position = Vector2(6, 52)
+polygon = PackedVector2Array(1225, 112, 1043, -404, 44, -391, -382, -132, 600, 295)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2" unique_id=358440175]
+position = Vector2(3, 51)
+polygon = PackedVector2Array(1225, 112, 1043, -404, 44, -391, -382, -132, 600, 295)
+
+[node name="ComponenteNivelador" type="Node2D" parent="StaticBody2D2" unique_id=997022114 node_paths=PackedStringArray("nodo_a_nivelar", "area_de_agarre")]
+script = ExtResource("2_hgbn4")
+nodo_a_nivelar = NodePath("..")
+area_de_agarre = NodePath("../Area2D")
+metadata/_custom_type_script = "uid://bcld1bfgimyjk"
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D2" unique_id=552586736]
+position = Vector2(518, -200)
+scale = Vector2(0.5, 0.5)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D2/Area2D" unique_id=63515912]
+position = Vector2(883.5, -121.500015)
+scale = Vector2(2.2421875, 1.6328125)
+texture = ExtResource("3_n0lwm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/Area2D" unique_id=1310397287]
+position = Vector2(881.5, -125.25)
+shape = SubResource("RectangleShape2D_r3k05")
+
+[node name="Area2D2" type="Area2D" parent="StaticBody2D2" unique_id=831439051]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/Area2D2" unique_id=1648849410]
+position = Vector2(503.25, 95.5)
+shape = SubResource("RectangleShape2D_8dk67")
 
 [node name="Label" type="Label" parent="." unique_id=385155061]
 offset_left = 338.0
@@ -58,7 +100,7 @@ offset_top = -192.0
 offset_right = 2666.0
 offset_bottom = -68.0
 theme_override_font_sizes/font_size = 20
-text = "Presiona los cuadrados amarillos para rotar"
+text = "Presiona los cuadrados para rotar"
 
 [node name="CaraCanvas" parent="." unique_id=415942711 instance=ExtResource("3_hgbn4")]
 
@@ -71,3 +113,9 @@ camara = NodePath("Camera2D")
 [node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=2044790140]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=266713254]
+script = ExtResource("7_8dk67")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=735923131]
+shape = SubResource("WorldBoundaryShape2D_r3k05")
