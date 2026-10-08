@@ -2,7 +2,12 @@
 
 [ext_resource type="Script" uid="uid://vj7kxkj0wqnp" path="res://exit_button.gd" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://bsvhml328bd1m" path="res://botton_jugar.gd" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://bpxwdaidvby7e" path="res://assets/sprites/jugar.png" id="1_t41cs"]
 [ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="3_scxtn"]
+[ext_resource type="Script" uid="uid://ctd080b0cl5bt" path="res://creditos.gd" id="4_jak2h"]
+[ext_resource type="Texture2D" uid="uid://bhqftbhihgb4r" path="res://assets/sprites/boton para cerrar el juego xd.png" id="4_jppht"]
+[ext_resource type="Texture2D" uid="uid://c4g5rlkibsgy7" path="res://assets/sprites/creditos.png" id="5_d4jnx"]
+[ext_resource type="Texture2D" uid="uid://hxwaugthbofa" path="res://assets/sprites/JUEGO LOGO.png" id="6_oj7iq"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=894414050]
 
@@ -15,28 +20,38 @@ offset_right = 351.5
 offset_bottom = 519.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=1514803012]
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=1363380679]
+custom_minimum_size = Vector2(100, 200)
 layout_mode = 2
-theme_override_font_sizes/font_size = 160
-text = "NivelIAr"
-horizontal_alignment = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="JuegoLogo" type="Sprite2D" parent="VBoxContainer/Control" unique_id=1194733186]
+position = Vector2(79.50001, 165)
+scale = Vector2(0.54400355, 0.53902864)
+texture = ExtResource("6_oj7iq")
 
 [node name="Spacer" type="Control" parent="VBoxContainer" unique_id=1693571664]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=2139887840]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Spacer3" type="Control" parent="VBoxContainer" unique_id=673695937]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=372509475]
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1855646942]
+custom_minimum_size = Vector2(200, 100)
+custom_maximum_size = Vector2(200, -1)
 layout_mode = 2
-text = "Jugar"
-script = ExtResource("1_ouk20")
-
-[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=493396242]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=2041887223]
-layout_mode = 2
-text = "Salir"
+size_flags_horizontal = 4
+icon = ExtResource("4_jppht")
+flat = true
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_lti8b")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=708483438]
@@ -61,3 +76,31 @@ modulate = Color(0.45748308, 0.45748308, 0.45748308, 1)
 position = Vector2(19.999985, 28)
 scale = Vector2(0.61375433, 0.6137544)
 texture = ExtResource("3_scxtn")
+
+[node name="Button" type="Button" parent="." unique_id=467697754]
+custom_maximum_size = Vector2(250, -1)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -101.0
+offset_right = 349.0
+grow_vertical = 0
+icon = ExtResource("5_d4jnx")
+flat = true
+expand_icon = true
+script = ExtResource("4_jak2h")
+
+[node name="Button2" type="Button" parent="." unique_id=372509475]
+custom_minimum_size = Vector2(200, 120)
+custom_maximum_size = Vector2(300, -1)
+offset_left = 509.0
+offset_top = 392.0
+offset_right = 809.0
+offset_bottom = 512.0
+size_flags_horizontal = 4
+icon = ExtResource("1_t41cs")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+script = ExtResource("1_ouk20")
