@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cdplmncuvme3v"]
+
+[ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="1_ilafw"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=380058517]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=880792547]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -583.0
+offset_top = -262.0
+offset_right = 583.0
+offset_bottom = 262.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=315311763]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Creditos:"
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=452615752]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "Tomas Sanchez (dibujante y programador)
+Cristian Frutos (compositor musical)
+Ignacio Bertello (programador)
+Joaquin Guareschi (dibujante)"
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=116150684]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1479107380]
+layout_mode = 2
+text = "Volver al menu"
+script = ExtResource("1_ilafw")
