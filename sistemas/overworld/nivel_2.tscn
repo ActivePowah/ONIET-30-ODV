@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cm8fa48k0t7ck"]
+
+[ext_resource type="Script" uid="uid://48stx56iqlx7" path="res://sistemas/overworld/nivel.gd" id="1_6vpx4"]
+[ext_resource type="Texture2D" uid="uid://u5xiuekvy5lp" path="res://assets/musica/icon.svg" id="2_2mna2"]
+
+[node name="Nivel2" type="Node2D" unique_id=1886793892 node_paths=PackedStringArray("spawn")]
+script = ExtResource("1_6vpx4")
+spawn = NodePath("Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1207990717]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=82479227]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1736141151]
+position = Vector2(6, 52)
+polygon = PackedVector2Array(-47, -33, 64, -48, 102, 144, -69, 149)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=181746568]
+position = Vector2(91, 88)
+texture = ExtResource("2_2mna2")

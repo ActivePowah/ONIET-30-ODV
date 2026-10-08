@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://xcv20aj60xv1"]
 
+[ext_resource type="Script" uid="uid://de63n2hd8pxjf" path="res://sistemas/overworld/overworld.gd" id="1_06812"]
 [ext_resource type="PackedScene" uid="uid://bqntfgk0smxuh" path="res://entidades/jugador/jugador.tscn" id="1_c2dhu"]
+[ext_resource type="PackedScene" uid="uid://bhb2vks51b4tk" path="res://sistemas/overworld/cara_canvas.tscn" id="2_cvmmj"]
+[ext_resource type="PackedScene" uid="uid://8s3jkcccq1g8" path="res://sistemas/overworld/nivel_1.tscn" id="2_qwgsk"]
+[ext_resource type="PackedScene" uid="uid://cm8fa48k0t7ck" path="res://sistemas/overworld/nivel_2.tscn" id="3_si76k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3k05"]
-size = Vector2(454, 25)
+[node name="Overworld" type="Node2D" unique_id=1776306393 node_paths=PackedStringArray("jugador")]
+script = ExtResource("1_06812")
+niveles = Array[PackedScene]([ExtResource("2_qwgsk"), ExtResource("3_si76k")])
+jugador = NodePath("Jugador")
 
-[node name="Overworld" type="Node2D" unique_id=1776306393]
+[node name="CaraCanvas" parent="." unique_id=415942711 instance=ExtResource("2_cvmmj")]
 
-[node name="Jugador" parent="." unique_id=870915588 instance=ExtResource("1_c2dhu")]
+[node name="Jugador" parent="." unique_id=870915588 node_paths=PackedStringArray("camara") instance=ExtResource("1_c2dhu")]
+camara = NodePath("Camera2D")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=996588662]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1038584332]
-position = Vector2(21, 109)
-shape = SubResource("RectangleShape2D_r3k05")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=926362710]
+[node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=926362710]
 zoom = Vector2(2, 2)
+position_smoothing_enabled = true
