@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://msqg6jg0oyxt"]
+
+[ext_resource type="Script" uid="uid://db4vbyy2m33p0" path="res://interfaz/efectos_agarrando.gd" id="1_a1fx3"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=756627589]
+script = ExtResource("1_a1fx3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1487705468]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -765.0
+offset_top = -465.0
+offset_right = 765.0
+offset_bottom = 465.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.078431375)
