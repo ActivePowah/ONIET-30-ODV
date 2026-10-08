@@ -3,8 +3,10 @@
 [ext_resource type="Theme" uid="uid://bao64fw2qf7ui" path="res://tema_principal.tres" id="1_moa8w"]
 [ext_resource type="Script" uid="uid://bgdeikxgxhh1g" path="res://interfaz/nivel_1.gd" id="2_bw4h4"]
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="2_f02h5"]
+[ext_resource type="Texture2D" uid="uid://harwc3834cey" path="res://assets/sprites/boton1.png" id="2_l1loy"]
 [ext_resource type="Script" uid="uid://d2tpaejbojok2" path="res://interfaz/Nivel2.gd" id="3_apsk4"]
 [ext_resource type="Texture2D" uid="uid://bfbuwl1hw82bm" path="res://assets/sprites/menu.png" id="4_6qd5i"]
+[ext_resource type="Texture2D" uid="uid://cmp4nkjqds3wr" path="res://assets/sprites/boton2.png" id="4_tf3d8"]
 [ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="5_2mc3s"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1076210625]
@@ -37,13 +39,17 @@ alignment = 1
 [node name="Nivel1" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1658415603]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-text = "1"
+icon = ExtResource("2_l1loy")
+flat = true
+expand_icon = true
 script = ExtResource("2_bw4h4")
 
 [node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1984612086]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "2"
+icon = ExtResource("4_tf3d8")
+flat = true
+expand_icon = true
 script = ExtResource("3_apsk4")
 
 [node name="Button3" type="Button" parent="." unique_id=1682606283]
