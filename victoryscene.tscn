@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="1_iqt07"]
 [ext_resource type="Texture2D" uid="uid://c4chf2wyj1jyg" path="res://assets/sprites/CARTELVICTORIA.png" id="1_r6b0i"]
+[ext_resource type="Texture2D" uid="uid://bixjqf8ny8gh8" path="res://assets/sprites/proximo nivel.png" id="2_057kk"]
 [ext_resource type="Script" uid="uid://d2tpaejbojok2" path="res://interfaz/Nivel2.gd" id="2_ux5v5"]
+[ext_resource type="Texture2D" uid="uid://bfbuwl1hw82bm" path="res://assets/sprites/menu.png" id="3_dp2xl"]
 [ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="3_dyjwk"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1502854728]
@@ -31,23 +33,8 @@ scale = Vector2(0.53209025, 0.5320902)
 texture = ExtResource("1_r6b0i")
 
 [node name="Spacer" type="Control" parent="VBoxContainer2" unique_id=2025808998]
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
-
-[node name="Button3" type="Button" parent="VBoxContainer2" unique_id=1751420794]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-text = "Siguiente Nivel"
-script = ExtResource("2_ux5v5")
-
-[node name="Spacer2" type="Control" parent="VBoxContainer2" unique_id=1380220873]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-
-[node name="Button2" type="Button" parent="VBoxContainer2" unique_id=1436072456]
-layout_mode = 2
-text = "Volver al menu"
-script = ExtResource("1_iqt07")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1054829806]
 layer = -13
@@ -71,3 +58,25 @@ modulate = Color(0.45748308, 0.45748308, 0.45748308, 1)
 position = Vector2(19.999985, 28)
 scale = Vector2(0.61375433, 0.6137544)
 texture = ExtResource("3_dyjwk")
+
+[node name="Button2" type="Button" parent="." unique_id=1436072456]
+custom_minimum_size = Vector2(0, 200)
+offset_left = 410.0
+offset_top = 527.0
+offset_right = 992.0
+offset_bottom = 727.0
+icon = ExtResource("3_dp2xl")
+flat = true
+expand_icon = true
+script = ExtResource("1_iqt07")
+
+[node name="Button3" type="Button" parent="." unique_id=1751420794]
+custom_minimum_size = Vector2(0, 200)
+offset_left = 410.0
+offset_top = 334.0
+offset_right = 992.0
+offset_bottom = 534.0
+icon = ExtResource("2_057kk")
+flat = true
+expand_icon = true
+script = ExtResource("2_ux5v5")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cryxexxkdng65"
-path="res://.godot/imported/pose de victoria.png-babe80cf03b359e008e2269fa9781f00.ctex"
+uid="uid://bfbuwl1hw82bm"
+path="res://.godot/imported/menu.png-28b495f0a44f4c4d29caa1292bc85c44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/pose de victoria.png"
-dest_files=["res://.godot/imported/pose de victoria.png-babe80cf03b359e008e2269fa9781f00.ctex"]
+source_file="res://assets/sprites/menu.png"
+dest_files=["res://.godot/imported/menu.png-28b495f0a44f4c4d29caa1292bc85c44.ctex"]
 
 [params]
 
