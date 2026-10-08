@@ -6,17 +6,19 @@ extends CanvasLayer
 @export var cara_sprite : AnimatedSprite2D
 
 var tiempo_ahora : float = 0.
+var ansioso : bool = false
 
 func _ready() -> void:
 	tiempo_ahora = tiempo_maximo
 	AudioManager.play_music(AudioManager.canciones[AudioManager.Canciones.NORMAL])
-	pass
+
 	
 func _process(delta: float) -> void:	
 	tiempo_ahora -= delta
-	if tiempo_ahora <= tiempo_ans:
+	if tiempo_ahora <= tiempo_ans and not ansioso:
+		ansioso = true
 		cara_sprite.play(&"ansioso")
-		#AudioManager.play_music(AudioManager.canciones[AudioManager.Canciones.ANSIOSO], AudioManager.music_player.get_playback_position())
+		AudioManager.play_music(AudioManager.canciones[AudioManager.Canciones.ANSIOSO], AudioManager.music_player.get_playback_position())
 	if tiempo_ahora <= tiempo_apurado:
 		#cara_sprite.play(&"apurado")
 		#AudioManager.play_music(AudioManager.canciones[AudioManager.Canciones.APURADO], AudioManager.music_player.get_playback_position())
