@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	tiempo_ahora -= delta
 	if tiempo_ahora <= tiempo_ans:
 		cara_sprite.play(&"ansioso")
-		#AudioManager.play_music(AudioManager.canciones[AudioManager.Canciones.ANSIOSO], AudioManager.music_player.get_playback_position())
+		AudioManager.play_music(AudioManager.canciones[AudioManager.Canciones.ANSIOSO], AudioManager.music_player.get_playback_position())
 	if tiempo_ahora <= tiempo_apurado:
 		#cara_sprite.play(&"apurado")
 		#AudioManager.play_music(AudioManager.canciones[AudioManager.Canciones.APURADO], AudioManager.music_player.get_playback_position())

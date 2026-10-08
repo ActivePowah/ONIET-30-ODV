@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ONIET-ODV-Nivela"
-run/main_scene="uid://xcv20aj60xv1"
+run/main_scene="uid://c8hsyfkkk0bbs"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
