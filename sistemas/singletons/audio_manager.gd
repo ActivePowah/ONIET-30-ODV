@@ -25,7 +25,7 @@ func play_sound(sound:AudioStream):
 	_sound_player.bus = &"Sonidos"
 	_sound_player.stream = sound
 	_sound_player.play()
-	_sound_player.finished.connect(_sound_ended(_sound_player))
+	_sound_player.finished.connect(_sound_ended.bind(_sound_player))
 
 func play_music(music:AudioStream, time:float = 0):
 	music_player.stream = music

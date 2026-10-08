@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dv2on7vfyxj1b"]
 
-[ext_resource type="Theme" uid="uid://bao64fw2qf7ui" path="res://tema_principal.tres" id="1_moa8w"]
 [ext_resource type="Script" uid="uid://bgdeikxgxhh1g" path="res://interfaz/nivel_1.gd" id="2_bw4h4"]
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="2_f02h5"]
 [ext_resource type="Texture2D" uid="uid://harwc3834cey" path="res://assets/sprites/boton1.png" id="2_l1loy"]
@@ -8,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bfbuwl1hw82bm" path="res://assets/sprites/menu.png" id="4_6qd5i"]
 [ext_resource type="Texture2D" uid="uid://cmp4nkjqds3wr" path="res://assets/sprites/boton2.png" id="4_tf3d8"]
 [ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="5_2mc3s"]
+[ext_resource type="Texture2D" uid="uid://dxqhdrkye7ya6" path="res://assets/sprites/seleccionador.png" id="8_l1loy"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1076210625]
 
@@ -21,14 +21,8 @@ offset_bottom = 432.0
 grow_horizontal = 2
 size_flags_horizontal = 0
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=1341869108]
-layout_mode = 2
-theme = ExtResource("1_moa8w")
-text = "Selecciona un nivel"
-horizontal_alignment = 1
-
 [node name="Spacer" type="Control" parent="VBoxContainer" unique_id=624891549]
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1360181345]
@@ -88,3 +82,7 @@ modulate = Color(0.45748308, 0.45748308, 0.45748308, 1)
 position = Vector2(19.999985, 28)
 scale = Vector2(0.61375433, 0.6137544)
 texture = ExtResource("5_2mc3s")
+
+[node name="Seleccionador" type="Sprite2D" parent="CanvasLayer/Control" unique_id=916291457]
+position = Vector2(32, -246)
+texture = ExtResource("8_l1loy")

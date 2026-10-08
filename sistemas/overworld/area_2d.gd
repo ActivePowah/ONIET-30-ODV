@@ -6,3 +6,4 @@ func _ready() -> void:
 
 func matar(body:Node):
 	get_tree().call_deferred("change_scene_to_file", "res://defeatscene.tscn")
+	AudioManager.play_music(AudioManager.canciones[AudioManager.Canciones.DERROTA])

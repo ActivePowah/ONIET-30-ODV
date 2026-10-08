@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="1_flyxe"]
 [ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="3_3dkjk"]
 [ext_resource type="Texture2D" uid="uid://bhqftbhihgb4r" path="res://assets/sprites/boton para cerrar el juego xd.png" id="3_tyafw"]
+[ext_resource type="Texture2D" uid="uid://8guui414gmuf" path="res://assets/sprites/pose de victoria2.png" id="5_tyafw"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=191100613]
 
@@ -26,6 +27,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 
 [node name="Cartelvictoria" type="Sprite2D" parent="VBoxContainer2/Control" unique_id=2002603689]
+z_index = 2
 position = Vector2(131.99998, 350.50003)
 scale = Vector2(0.53209025, 0.5320902)
 texture = ExtResource("1_55rtp")
@@ -35,6 +37,7 @@ custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
 [node name="Button2" type="Button" parent="VBoxContainer2" unique_id=1688662743]
+z_index = 1
 layout_mode = 2
 icon = ExtResource("3_tyafw")
 flat = true
@@ -62,3 +65,7 @@ modulate = Color(0.45748308, 0.45748308, 0.45748308, 1)
 position = Vector2(19.999985, 28)
 scale = Vector2(0.61375433, 0.6137544)
 texture = ExtResource("3_3dkjk")
+
+[node name="PoseDeVictoria2" type="Sprite2D" parent="." unique_id=219039431]
+position = Vector2(1044, 427)
+texture = ExtResource("5_tyafw")

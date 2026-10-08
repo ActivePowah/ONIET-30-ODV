@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="ONIET-ODV-Nivela"
+config/name="NIVELIAR"
 run/main_scene="uid://c8hsyfkkk0bbs"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"

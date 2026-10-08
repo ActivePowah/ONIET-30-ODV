@@ -27,4 +27,5 @@ func _physics_process(delta: float) -> void:
 
 func morir():
 	if is_on_wall():
+		AudioManager.play_music(AudioManager.canciones[AudioManager.Canciones.DERROTA])
 		get_tree().change_scene_to_file("res://defeatscene.tscn")

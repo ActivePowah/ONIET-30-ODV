@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://vj7kxkj0wqnp" path="res://exit_button.gd" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://bsvhml328bd1m" path="res://botton_jugar.gd" id="1_ouk20"]
+[ext_resource type="Script" uid="uid://bisebugukiel5" path="res://menu.gd" id="1_pvors"]
 [ext_resource type="Texture2D" uid="uid://bpxwdaidvby7e" path="res://assets/sprites/jugar.png" id="1_t41cs"]
 [ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="3_scxtn"]
 [ext_resource type="Script" uid="uid://ctd080b0cl5bt" path="res://creditos.gd" id="4_jak2h"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://hxwaugthbofa" path="res://assets/sprites/JUEGO LOGO.png" id="6_oj7iq"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=894414050]
+script = ExtResource("1_pvors")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2057960755]
 anchors_preset = 5

@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://b4e7ewat2auy6" path="res://sistemas/overworld/area_2d.gd" id="7_8dk67"]
 [ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="9_l2umo"]
 [ext_resource type="Script" uid="uid://cuqh1nid3joj2" path="res://sistemas/overworld/win.gd" id="9_xdj4n"]
+[ext_resource type="Texture2D" uid="uid://co8ngsc4xq1f2" path="res://assets/sprites/meta.png" id="11_evquv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3k05"]
 size = Vector2(526, 220)
@@ -219,9 +220,12 @@ texture = ExtResource("9_l2umo")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=1172115250]
 script = ExtResource("9_xdj4n")
-final_victory = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1308797230]
 position = Vector2(6543.8, -1269)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_xdj4n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2" unique_id=638733113]
+position = Vector2(6615, -1142)
+texture = ExtResource("11_evquv")
