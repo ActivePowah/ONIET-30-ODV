@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ddtkjvfb2mna8"]
+
+[ext_resource type="Script" uid="uid://db00e65bo4fyv" path="res://sistemas/singletons/audio_manager.gd" id="1_goeia"]
+
+[node name="AudioManager" type="Node" unique_id=915187914]
+script = ExtResource("1_goeia")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=620948440]
+unique_name_in_owner = true
+bus = &"Musica"

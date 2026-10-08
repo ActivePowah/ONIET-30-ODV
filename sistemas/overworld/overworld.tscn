@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://xcv20aj60xv1"]
+
+[ext_resource type="PackedScene" uid="uid://bqntfgk0smxuh" path="res://entidades/jugador/jugador.tscn" id="1_c2dhu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3k05"]
+size = Vector2(454, 25)
+
+[node name="Overworld" type="Node2D" unique_id=1776306393]
+
+[node name="Jugador" parent="." unique_id=870915588 instance=ExtResource("1_c2dhu")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=996588662]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1038584332]
+position = Vector2(21, 109)
+shape = SubResource("RectangleShape2D_r3k05")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=926362710]
+zoom = Vector2(2, 2)

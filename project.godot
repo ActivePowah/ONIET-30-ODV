@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="ONIET-ODV-Nivela"
+run/main_scene="uid://xcv20aj60xv1"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://cjdfsxqbofkyh"
+
+[autoload]
+
+AudioManager="*uid://ddtkjvfb2mna8"
 
 [display]
 
