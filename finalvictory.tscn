@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="1_flyxe"]
 [ext_resource type="Script" uid="uid://ctd080b0cl5bt" path="res://creditos.gd" id="1_x8gjx"]
+[ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="3_3dkjk"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=191100613]
 
@@ -40,3 +41,26 @@ layout_mode = 2
 layout_mode = 2
 text = "Volver al menu"
 script = ExtResource("1_flyxe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1893927465]
+layer = -13
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=918262137]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="Sprite2D" parent="CanvasLayer/Control" unique_id=300902079]
+modulate = Color(0.45748308, 0.45748308, 0.45748308, 1)
+position = Vector2(19.999985, 28)
+scale = Vector2(0.61375433, 0.6137544)
+texture = ExtResource("3_3dkjk")

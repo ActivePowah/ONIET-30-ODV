@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b2gqiji0h0t74"]
 
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="1_06jp2"]
+[ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="2_06jp2"]
 
 [node name="defeatscene" type="CanvasLayer" unique_id=2145725605]
 
@@ -30,3 +31,26 @@ layout_mode = 2
 layout_mode = 2
 text = "Volver al menu"
 script = ExtResource("1_06jp2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1136253444]
+layer = -13
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1573150241]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="Sprite2D" parent="CanvasLayer/Control" unique_id=1651888720]
+modulate = Color(0.45748308, 0.45748308, 0.45748308, 1)
+position = Vector2(19.999985, 28)
+scale = Vector2(0.61375433, 0.6137544)
+texture = ExtResource("2_06jp2")
