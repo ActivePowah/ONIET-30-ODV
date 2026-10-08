@@ -9,7 +9,6 @@ func _ready() -> void:
 func ganar(_body:Node):
 	var scene:String = "res://victoryscene.tscn" if not final_victory else "res://finalvictory.tscn"
 	get_tree().call_deferred("change_scene_to_file", scene)
-	AudioManager.play_music()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
