@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://b2gqiji0h0t74"]
 
+[ext_resource type="Texture2D" uid="uid://bfbuwl1hw82bm" path="res://assets/sprites/menu.png" id="1_4gqt3"]
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="1_06jp2"]
 [ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="2_06jp2"]
+[ext_resource type="Texture2D" uid="uid://cwlpfqmik224u" path="res://assets/sprites/derorta.png" id="4_rso2m"]
 
 [node name="defeatscene" type="CanvasLayer" unique_id=2145725605]
 
@@ -18,18 +20,14 @@ offset_bottom = 114.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=674951344]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Perdiste"
-
 [node name="Spacer" type="Control" parent="VBoxContainer" unique_id=200951184]
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=908902604]
 layout_mode = 2
-text = "Volver al menu"
+icon = ExtResource("1_4gqt3")
+flat = true
 script = ExtResource("1_06jp2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1136253444]
@@ -54,3 +52,15 @@ modulate = Color(0.45748308, 0.45748308, 0.45748308, 1)
 position = Vector2(19.999985, 28)
 scale = Vector2(0.61375433, 0.6137544)
 texture = ExtResource("2_06jp2")
+
+[node name="Control" type="Control" parent="." unique_id=1248978070]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 724.0
+offset_top = 198.0
+offset_right = 764.0
+offset_bottom = 238.0
+
+[node name="Derorta" type="Sprite2D" parent="Control" unique_id=2072349886]
+scale = Vector2(0.42534864, 0.42534864)
+texture = ExtResource("4_rso2m")

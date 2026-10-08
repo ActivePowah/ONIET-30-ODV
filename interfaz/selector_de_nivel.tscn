@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bgdeikxgxhh1g" path="res://interfaz/nivel_1.gd" id="2_bw4h4"]
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="2_f02h5"]
 [ext_resource type="Script" uid="uid://d2tpaejbojok2" path="res://interfaz/Nivel2.gd" id="3_apsk4"]
+[ext_resource type="Texture2D" uid="uid://bfbuwl1hw82bm" path="res://assets/sprites/menu.png" id="4_6qd5i"]
 [ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="5_2mc3s"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1076210625]
@@ -45,14 +46,18 @@ layout_mode = 2
 text = "2"
 script = ExtResource("3_apsk4")
 
-[node name="Button" type="Button" parent="." unique_id=171678629]
+[node name="Button3" type="Button" parent="." unique_id=1682606283]
+custom_minimum_size = Vector2(200, 100)
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -8.0
-offset_right = 8.0
+offset_top = -100.0
+offset_right = 200.0
 grow_vertical = 0
-text = "Volver"
+icon = ExtResource("4_6qd5i")
+flat = true
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("2_f02h5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=734682711]
