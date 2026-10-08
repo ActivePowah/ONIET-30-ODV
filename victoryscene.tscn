@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://mt7ky1vm8ls4"]
 
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="1_iqt07"]
+[ext_resource type="Texture2D" uid="uid://c4chf2wyj1jyg" path="res://assets/sprites/CARTELVICTORIA.png" id="1_r6b0i"]
 [ext_resource type="Script" uid="uid://d2tpaejbojok2" path="res://interfaz/Nivel2.gd" id="2_ux5v5"]
+[ext_resource type="Texture2D" uid="uid://b8tecb0p6ouft" path="res://assets/sprites/fondo.png" id="3_dyjwk"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1502854728]
 
@@ -18,10 +20,15 @@ offset_bottom = 114.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="VBoxContainer2" unique_id=1193903315]
+[node name="Control" type="Control" parent="VBoxContainer2" unique_id=970425147]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Ganaste"
+
+[node name="Cartelvictoria" type="Sprite2D" parent="VBoxContainer2/Control" unique_id=2078128606]
+position = Vector2(122.49999, 303.99997)
+scale = Vector2(0.53209025, 0.5320902)
+texture = ExtResource("1_r6b0i")
 
 [node name="Spacer" type="Control" parent="VBoxContainer2" unique_id=2025808998]
 custom_minimum_size = Vector2(0, 100)
@@ -41,3 +48,26 @@ layout_mode = 2
 layout_mode = 2
 text = "Volver al menu"
 script = ExtResource("1_iqt07")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1054829806]
+layer = -13
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1607149363]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="Sprite2D" parent="CanvasLayer/Control" unique_id=1453933999]
+modulate = Color(0.45748308, 0.45748308, 0.45748308, 1)
+position = Vector2(19.999985, 28)
+scale = Vector2(0.61375433, 0.6137544)
+texture = ExtResource("3_dyjwk")
