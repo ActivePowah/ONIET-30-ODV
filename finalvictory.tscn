@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dt4e7lkmlckr"]
+
+[ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="1_flyxe"]
+[ext_resource type="Script" uid="uid://ctd080b0cl5bt" path="res://creditos.gd" id="1_x8gjx"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=191100613]
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=40613640]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -291.0
+offset_top = -114.5
+offset_right = 291.0
+offset_bottom = 114.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=1220224072]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Ganaste"
+
+[node name="Spacer" type="Control" parent="VBoxContainer2" unique_id=471446655]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer2" unique_id=1767647494]
+layout_mode = 2
+text = "Creditos"
+script = ExtResource("1_x8gjx")
+
+[node name="Spacer2" type="Control" parent="VBoxContainer2" unique_id=1269933824]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="VBoxContainer2" unique_id=1688662743]
+layout_mode = 2
+text = "Volver al menu"
+script = ExtResource("1_flyxe")

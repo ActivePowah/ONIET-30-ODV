@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://mt7ky1vm8ls4"]
+
+[ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="1_iqt07"]
+[ext_resource type="Script" uid="uid://d2tpaejbojok2" path="res://interfaz/Nivel2.gd" id="2_ux5v5"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1502854728]
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1356740650]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -291.0
+offset_top = -114.5
+offset_right = 291.0
+offset_bottom = 114.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=1193903315]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Ganaste"
+
+[node name="Spacer" type="Control" parent="VBoxContainer2" unique_id=2025808998]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="VBoxContainer2" unique_id=1751420794]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Siguiente Nivel"
+script = ExtResource("2_ux5v5")
+
+[node name="Spacer2" type="Control" parent="VBoxContainer2" unique_id=1380220873]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="VBoxContainer2" unique_id=1436072456]
+layout_mode = 2
+text = "Volver al menu"
+script = ExtResource("1_iqt07")
