@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dv2on7vfyxj1b"]
 
 [ext_resource type="Theme" uid="uid://bao64fw2qf7ui" path="res://tema_principal.tres" id="1_moa8w"]
+[ext_resource type="Script" uid="uid://bgdeikxgxhh1g" path="res://interfaz/nivel_1.gd" id="2_bw4h4"]
 [ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="2_f02h5"]
+[ext_resource type="Script" uid="uid://d2tpaejbojok2" path="res://interfaz/Nivel2.gd" id="3_apsk4"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1076210625]
 
@@ -30,15 +32,17 @@ layout_mode = 2
 theme_override_constants/separation = 60
 alignment = 1
 
-[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1658415603]
+[node name="Nivel1" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1658415603]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 text = "1"
+script = ExtResource("2_bw4h4")
 
 [node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1984612086]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "2"
+script = ExtResource("3_apsk4")
 
 [node name="Button" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1512107191]
 custom_minimum_size = Vector2(200, 0)

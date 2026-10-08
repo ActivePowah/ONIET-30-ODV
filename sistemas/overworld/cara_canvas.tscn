@@ -45,18 +45,16 @@ cara_sprite = NodePath("Control/Cara")
 
 [node name="Control" type="Control" parent="." unique_id=590265693]
 layout_mode = 3
-anchors_preset = 3
-anchor_left = 1.0
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -40.0
 offset_top = -40.0
-grow_horizontal = 0
+offset_right = 40.0
 grow_vertical = 0
 
 [node name="Cara" type="AnimatedSprite2D" parent="Control" unique_id=771750043]
-position = Vector2(-163, -199)
+position = Vector2(124.17787, -114.5)
+scale = Vector2(0.6778656, 0.6778656)
 sprite_frames = SubResource("SpriteFrames_aef47")
 animation = &"normal"
 autoplay = "normal"
