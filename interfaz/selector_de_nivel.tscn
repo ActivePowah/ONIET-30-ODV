@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dv2on7vfyxj1b"]
+
+[ext_resource type="Theme" uid="uid://bao64fw2qf7ui" path="res://tema_principal.tres" id="1_moa8w"]
+[ext_resource type="Script" uid="uid://bgdeikxgxhh1g" path="res://interfaz/nivel_1.gd" id="2_bw4h4"]
+[ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="2_f02h5"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1076210625]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1947744437]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -506.0
+offset_right = 506.0
+offset_bottom = 432.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1341869108]
+layout_mode = 2
+theme = ExtResource("1_moa8w")
+text = "Selecciona un nivel"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=624891549]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1360181345]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Nivel1" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1658415603]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+text = "1"
+script = ExtResource("2_bw4h4")
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1984612086]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "2"
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1512107191]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "3"
+
+[node name="Button" type="Button" parent="." unique_id=171678629]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 8.0
+grow_vertical = 0
+text = "Volver"
+script = ExtResource("2_f02h5")

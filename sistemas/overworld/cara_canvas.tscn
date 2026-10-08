@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bhb2vks51b4tk"]
+
+[ext_resource type="Script" uid="uid://buuajpu6kxknp" path="res://sistemas/overworld/cara_canvas.gd" id="1_0bh3s"]
+[ext_resource type="Texture2D" uid="uid://wlqyxyqppbcu" path="res://assets/sprites/portrait 2a.png" id="1_2w8om"]
+[ext_resource type="Texture2D" uid="uid://cwqb743ov3ujd" path="res://assets/sprites/portrait 2b.png" id="2_0bh3s"]
+[ext_resource type="Texture2D" uid="uid://duwsaeo34wo0b" path="res://assets/sprites/portrait 2c.png" id="3_np8p3"]
+[ext_resource type="Texture2D" uid="uid://cv74n21c8bqox" path="res://assets/sprites/portrait 1a.png" id="4_yc281"]
+[ext_resource type="Texture2D" uid="uid://6r03icbijaea" path="res://assets/sprites/portrait 1b.png" id="5_0h2xp"]
+[ext_resource type="Texture2D" uid="uid://dofnfrci42xof" path="res://assets/sprites/portrait 1c.png" id="6_85d70"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aef47"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2w8om")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0bh3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_np8p3")
+}],
+"loop": 1,
+"name": &"ansioso",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_yc281")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0h2xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_85d70")
+}],
+"loop": 1,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[node name="CaraCanvas" type="CanvasLayer" unique_id=415942711 node_paths=PackedStringArray("cara_sprite")]
+script = ExtResource("1_0bh3s")
+cara_sprite = NodePath("Control/Cara")
+
+[node name="Control" type="Control" parent="." unique_id=590265693]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="Cara" type="AnimatedSprite2D" parent="Control" unique_id=771750043]
+position = Vector2(124.17787, -114.5)
+scale = Vector2(0.6778656, 0.6778656)
+sprite_frames = SubResource("SpriteFrames_aef47")
+animation = &"normal"
+autoplay = "normal"

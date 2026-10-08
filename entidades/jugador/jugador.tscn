@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bqntfgk0smxuh"]
+
+[ext_resource type="Script" uid="uid://buexne6f4ic0e" path="res://entidades/jugador/jugador.gd" id="1_78n3h"]
+[ext_resource type="Texture2D" uid="uid://b4ogco8up30k7" path="res://entidades/jugador/run_sprite_guy.png" id="1_vvei2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8lgo"]
+atlas = ExtResource("1_vvei2")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hhml"]
+atlas = ExtResource("1_vvei2")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xbqb"]
+atlas = ExtResource("1_vvei2")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rudo"]
+atlas = ExtResource("1_vvei2")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0ul3"]
+atlas = ExtResource("1_vvei2")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ow0e5"]
+atlas = ExtResource("1_vvei2")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ow0e5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8lgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hhml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xbqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rudo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0ul3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ow0e5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvmmj"]
+
+[node name="Jugador" type="CharacterBody2D" unique_id=870915588 node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_78n3h")
+sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=886532714]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ow0e5")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=230980560]
+position = Vector2(-1, 8)
+shape = SubResource("CapsuleShape2D_cvmmj")
