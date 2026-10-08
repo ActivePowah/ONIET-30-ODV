@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b2gqiji0h0t74"]
+
+[ext_resource type="Script" uid="uid://b7grhsg5a1d83" path="res://interfaz/boton_volver.gd" id="1_06jp2"]
+
+[node name="defeatscene" type="CanvasLayer" unique_id=2145725605]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1314068464]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -291.0
+offset_top = -114.5
+offset_right = 291.0
+offset_bottom = 114.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=674951344]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Perdiste"
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=200951184]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=908902604]
+layout_mode = 2
+text = "Volver al menu"
+script = ExtResource("1_06jp2")
