@@ -12,10 +12,10 @@ func _ready() -> void:
 	rotacion_inicial = nodo_a_nivelar.rotation
 	area_de_agarre.mouse_entered.connect(_on_mouse_entered)
 	area_de_agarre.mouse_exited.connect(_on_mouse_exited)
-	area_de_deteccion.body_entered.connect(func(body):
-		if body is Jugador:
-			jugador_encima = true
-		)
+	#area_de_deteccion.body_entered.connect(func(body):
+		#if body is Jugador:
+			#jugador_encima = true
+		#)
 
 func _on_mouse_entered():
 	Mano.mouse_entered(self)

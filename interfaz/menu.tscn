@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://c8hsyfkkk0bbs"]
 
+[ext_resource type="Script" uid="uid://vj7kxkj0wqnp" path="res://exit_button.gd" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://bsvhml328bd1m" path="res://botton_jugar.gd" id="1_ouk20"]
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=894414050]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2057960755]
@@ -24,7 +27,13 @@ layout_mode = 2
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=372509475]
 layout_mode = 2
 text = "Jugar"
+script = ExtResource("1_ouk20")
+
+[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=493396242]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=2041887223]
 layout_mode = 2
 text = "Salir"
+script = ExtResource("1_lti8b")
