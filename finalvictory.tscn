@@ -66,6 +66,18 @@ position = Vector2(19.999985, 28)
 scale = Vector2(0.61375433, 0.6137544)
 texture = ExtResource("3_3dkjk")
 
-[node name="PoseDeVictoria2" type="Sprite2D" parent="." unique_id=219039431]
-position = Vector2(1044, 427)
+[node name="Control" type="Control" parent="." unique_id=895845537]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="PoseDeVictoria2" type="Sprite2D" parent="Control" unique_id=219039431]
+position = Vector2(-153, -234)
 texture = ExtResource("5_tyafw")

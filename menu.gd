@@ -3,6 +3,7 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Engine.time_scale = 1
 	AudioManager.play_music(AudioManager.canciones[AudioManager.Canciones.MENU])
 	pass # Replace with function body.
 
